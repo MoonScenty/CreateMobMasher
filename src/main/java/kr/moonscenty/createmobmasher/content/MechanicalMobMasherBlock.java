@@ -100,6 +100,10 @@ public class MechanicalMobMasherBlock extends HorizontalKineticBlock implements 
 
         ItemStack removed = masher.removeLastUpgrade();
 
+        if (removed.isEmpty()) {
+            return InteractionResult.PASS;
+        }
+
         level.playSound(null, pos,
                 SoundEvents.ITEM_FRAME_REMOVE_ITEM,
                 SoundSource.BLOCKS,
@@ -111,10 +115,6 @@ public class MechanicalMobMasherBlock extends HorizontalKineticBlock implements 
                 SoundSource.BLOCKS,
                 0.7F,
                 1.25F);
-
-        if (removed.isEmpty()) {
-            return InteractionResult.PASS;
-        }
 
         if (!player.getInventory().add(removed)) {
             player.drop(removed, false);
