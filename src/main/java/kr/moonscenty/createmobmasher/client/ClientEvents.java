@@ -1,6 +1,7 @@
 package kr.moonscenty.createmobmasher.client;
 
 import kr.moonscenty.createmobmasher.CreateMobMasher;
+import kr.moonscenty.createmobmasher.client.ponder.CreateMobMasherPonderPlugin;
 import kr.moonscenty.createmobmasher.registry.ModBlockEntities;
 import kr.moonscenty.createmobmasher.registry.ModBlocks;
 import mob_grinding_utils.client.ModelLayers;
@@ -11,15 +12,22 @@ import net.minecraft.client.renderer.BlockEntityWithoutLevelRenderer;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
+import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
 import net.neoforged.neoforge.client.event.EntityRenderersEvent;
 import net.neoforged.neoforge.client.extensions.common.IClientItemExtensions;
 import net.neoforged.neoforge.client.extensions.common.RegisterClientExtensionsEvent;
+import net.createmod.ponder.foundation.PonderIndex;
 
 @EventBusSubscriber(
         modid = CreateMobMasher.MOD_ID,
         value = Dist.CLIENT
 )
 public class ClientEvents {
+
+    @SubscribeEvent
+    public static void clientSetup(FMLClientSetupEvent event) {
+        event.enqueueWork(() -> PonderIndex.addPlugin(new CreateMobMasherPonderPlugin()));
+    }
 
     @SubscribeEvent
     public static void registerClientExtensions(RegisterClientExtensionsEvent event) {

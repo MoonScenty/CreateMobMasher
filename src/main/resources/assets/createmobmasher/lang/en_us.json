@@ -16,5 +16,12 @@
   "tooltip.createmobmasher.mechanical_mob_masher.upgrade.fire": "Fire Aspect",
   "tooltip.createmobmasher.mechanical_mob_masher.upgrade.smite": "Smite",
   "tooltip.createmobmasher.mechanical_mob_masher.upgrade.arthropod": "Bane of Arthropods",
-  "tooltip.createmobmasher.mechanical_mob_masher.upgrade.beheading": "Beheading"
+  "tooltip.createmobmasher.mechanical_mob_masher.upgrade.beheading": "Beheading",
+  "createmobmasher.ponder.mechanical_mob_masher.header": "Using the Mechanical Mob Masher",
+  "createmobmasher.ponder.mechanical_mob_masher.text_1": "The Mechanical Mob Masher requires rotational force to operate",
+  "createmobmasher.ponder.mechanical_mob_masher.text_2": "It starts working at a minimum speed of 128 RPM",
+  "createmobmasher.ponder.mechanical_mob_masher.text_3": "Right-click with Mob Grinding Utils saw upgrades to install them",
+  "createmobmasher.ponder.mechanical_mob_masher.text_4": "Sneak-right-click with an empty hand to remove an installed upgrade",
+  "createmobmasher.ponder.mechanical_mob_masher.text_5": "It attacks every nearby living entity, whether friend or foe",
+  "createmobmasher.ponder.mechanical_mob_masher.text_6": "Defeated mobs drop their normal loot"
 }
