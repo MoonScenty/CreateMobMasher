@@ -2,7 +2,6 @@ package kr.moonscenty.createmobmasher.content;
 
 import com.simibubi.create.api.equipment.goggles.IHaveGoggleInformation;
 import com.simibubi.create.content.kinetics.base.KineticBlockEntity;
-import kr.moonscenty.createmobmasher.CreateMobMasher;
 import mob_grinding_utils.ModItems;
 import mob_grinding_utils.components.MGUComponents;
 import mob_grinding_utils.config.ServerConfig;
@@ -61,7 +60,6 @@ public class MechanicalMobMasherBlockEntity extends KineticBlockEntity  {
 
     public MechanicalMobMasherBlockEntity(BlockEntityType<?> type, BlockPos pos, BlockState state) {
         super(type, pos, state);
-        CreateMobMasher.LOG("MechanicalMobMasherBlockEntity Created");
     }
 
     @Override

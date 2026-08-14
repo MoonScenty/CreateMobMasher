@@ -28,6 +28,5 @@ public class ModCreativeModeTabs {
 
     public static void register(IEventBus modEventBus) {
         CREATIVE_MODE_TABS.register(modEventBus);
-        CreateMobMasher.LOG("Registering creative mode tabs");
     }
 }

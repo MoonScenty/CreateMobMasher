@@ -54,15 +54,11 @@ public class ClientEvents {
                 ModBlockEntities.MECHANICAL_MOB_MASHER.get(),
                 MechanicalMobMasherRenderer::new
         );
-
-        CreateMobMasher.LOG("Registered Mechanical Mob Masher renderer");
     }
 
     @SubscribeEvent
     public static void registerLayerDefinitions(EntityRenderersEvent.RegisterLayerDefinitions event) {
         event.registerLayerDefinition(ModelLayers.SAW_BASE, ModelSawBase::createBodyLayer);
         event.registerLayerDefinition(ModelLayers.SAW_BLADE, ModelSawBlade::createBodyLayer);
-
-        CreateMobMasher.LOG("Registered Mechanical Mob Masher model layers");
     }
 }

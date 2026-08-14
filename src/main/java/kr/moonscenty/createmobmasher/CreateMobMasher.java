@@ -23,11 +23,5 @@ public class CreateMobMasher {
         ModBlocks.register();
         ModBlockEntities.register();
         ModCreativeModeTabs.register(modEventBus);
-
-        LOG("Create Mob Masher loaded.");
-    }
-
-    public static void LOG(String message) {
-        System.out.println("[CreateMobMasher] " + message);
     }
 }

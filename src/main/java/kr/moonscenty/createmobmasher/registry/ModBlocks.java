@@ -50,6 +50,5 @@ public class ModBlocks {
                     .register();
 
     public static void register() {
-        CreateMobMasher.LOG("Registering blocks");
     }
 }

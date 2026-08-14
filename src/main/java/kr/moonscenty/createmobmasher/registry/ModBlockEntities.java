@@ -1,7 +1,6 @@
 package kr.moonscenty.createmobmasher.registry;
 
 import com.tterrag.registrate.util.entry.BlockEntityEntry;
-import kr.moonscenty.createmobmasher.CreateMobMasher;
 import kr.moonscenty.createmobmasher.content.MechanicalMobMasherBlockEntity;
 
 import static kr.moonscenty.createmobmasher.CreateMobMasher.REGISTRATE;
@@ -15,6 +14,5 @@ public class ModBlockEntities {
                     .register();
 
     public static void register() {
-        CreateMobMasher.LOG("Registering block entities");
     }
 }
