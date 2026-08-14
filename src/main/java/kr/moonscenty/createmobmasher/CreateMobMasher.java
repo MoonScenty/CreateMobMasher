@@ -1,13 +1,11 @@
 package kr.moonscenty.createmobmasher;
 
-import com.simibubi.create.api.stress.BlockStressValues;
 import com.simibubi.create.foundation.data.CreateRegistrate;
 import kr.moonscenty.createmobmasher.registry.ModBlockEntities;
 import kr.moonscenty.createmobmasher.registry.ModBlocks;
-import net.createmod.ponder.foundation.PonderIndex;
+import kr.moonscenty.createmobmasher.registry.ModCreativeModeTabs;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.fml.common.Mod;
-import net.neoforged.fml.loading.FMLEnvironment;
 
 @Mod(CreateMobMasher.MOD_ID)
 public class CreateMobMasher {
@@ -17,13 +15,12 @@ public class CreateMobMasher {
 
     public CreateMobMasher(IEventBus modEventBus) {
         REGISTRATE.registerEventListeners(modEventBus);
+        REGISTRATE.defaultCreativeTab(ModCreativeModeTabs.MAIN_KEY);
 
         ModBlocks.register();
         ModBlockEntities.register();
-/*
-        if (FMLEnvironment.dist.isClient()) {
-            CreateMobMasherClient.init(modEventBus);
-        }*/
+        ModCreativeModeTabs.register(modEventBus);
+
         LOG("Create Mob Masher loaded.");
     }
 
