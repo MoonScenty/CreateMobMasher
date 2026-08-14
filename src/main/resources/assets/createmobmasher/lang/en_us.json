@@ -1,0 +1,13 @@
+{
+  "itemGroup.createmobmasher": "Example Mod Tab",
+  "block.createmobmasher.example_block": "Example Block",
+  "item.createmobmasher.example_item": "Example Item",
+
+  "createmobmasher.configuration.title": "CreateMobMasher Configs",
+  "createmobmasher.configuration.section.createmobmasher.common.toml": "CreateMobMasher Configs",
+  "createmobmasher.configuration.section.createmobmasher.common.toml.title": "CreateMobMasher Configs",
+  "createmobmasher.configuration.items": "Item List",
+  "createmobmasher.configuration.logDirtBlock": "Log Dirt Block",
+  "createmobmasher.configuration.magicNumberIntroduction": "Magic Number Text",
+  "createmobmasher.configuration.magicNumber": "Magic Number"
+}
