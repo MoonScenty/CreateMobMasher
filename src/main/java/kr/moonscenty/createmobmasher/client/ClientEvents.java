@@ -2,20 +2,43 @@ package kr.moonscenty.createmobmasher.client;
 
 import kr.moonscenty.createmobmasher.CreateMobMasher;
 import kr.moonscenty.createmobmasher.registry.ModBlockEntities;
+import kr.moonscenty.createmobmasher.registry.ModBlocks;
 import mob_grinding_utils.client.ModelLayers;
 import mob_grinding_utils.models.ModelSawBase;
 import mob_grinding_utils.models.ModelSawBlade;
+import net.minecraft.client.Minecraft;
+import net.minecraft.client.renderer.BlockEntityWithoutLevelRenderer;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.neoforge.client.event.EntityRenderersEvent;
+import net.neoforged.neoforge.client.extensions.common.IClientItemExtensions;
+import net.neoforged.neoforge.client.extensions.common.RegisterClientExtensionsEvent;
 
 @EventBusSubscriber(
         modid = CreateMobMasher.MOD_ID,
-        bus = EventBusSubscriber.Bus.MOD,
         value = Dist.CLIENT
 )
 public class ClientEvents {
+
+    @SubscribeEvent
+    public static void registerClientExtensions(RegisterClientExtensionsEvent event) {
+        event.registerItem(new IClientItemExtensions() {
+            private MechanicalMobMasherItemRenderer renderer;
+
+            @Override
+            public BlockEntityWithoutLevelRenderer getCustomRenderer() {
+                if (renderer == null) {
+                    renderer = new MechanicalMobMasherItemRenderer(
+                            Minecraft.getInstance().getBlockEntityRenderDispatcher(),
+                            Minecraft.getInstance().getEntityModels()
+                    );
+                }
+
+                return renderer;
+            }
+        }, ModBlocks.MECHANICAL_MOB_MASHER.get().asItem());
+    }
 
     @SubscribeEvent
     public static void registerRenderers(EntityRenderersEvent.RegisterRenderers event) {
