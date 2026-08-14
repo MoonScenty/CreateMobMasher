@@ -93,7 +93,6 @@ If Gradle's dependency cache shits the bed, try:
 
 - No crafting recipe is included yet.
 - The English language file still needs proper localization entries.
-- The MGU saw mixin currently only prints a debug message and changes no behavior.
 - The attack target list is every `LivingEntity` in range. Until filtering is added, do not
   stand in the damn machine and then act surprised.
 
