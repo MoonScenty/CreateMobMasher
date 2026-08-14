@@ -1,0 +1,19 @@
+{
+  "block.createmobmasher.mechanical_mob_masher": "기계식 몹 분쇄기",
+  "block.createmobmasher.shaft_half": "반쪽 축",
+  "tooltip.createmobmasher.mechanical_mob_masher.title": "기계식 몹 분쇄기",
+  "tooltip.createmobmasher.mechanical_mob_masher.status": "상태: %s",
+  "tooltip.createmobmasher.mechanical_mob_masher.status.active": "작동 중",
+  "tooltip.createmobmasher.mechanical_mob_masher.status.inactive": "비활성 / 과부하",
+  "tooltip.createmobmasher.mechanical_mob_masher.required_speed": "필요 속도: %s",
+  "tooltip.createmobmasher.mechanical_mob_masher.stress_impact": "응력 소모: %s",
+  "tooltip.createmobmasher.mechanical_mob_masher.upgrades": "업그레이드",
+  "tooltip.createmobmasher.mechanical_mob_masher.upgrade_entry": "  %1$s x%2$s",
+  "tooltip.createmobmasher.mechanical_mob_masher.upgrade.none": "  없음",
+  "tooltip.createmobmasher.mechanical_mob_masher.upgrade.sharpness": "날카로움",
+  "tooltip.createmobmasher.mechanical_mob_masher.upgrade.looting": "약탈",
+  "tooltip.createmobmasher.mechanical_mob_masher.upgrade.fire": "발화",
+  "tooltip.createmobmasher.mechanical_mob_masher.upgrade.smite": "강타",
+  "tooltip.createmobmasher.mechanical_mob_masher.upgrade.arthropod": "살충",
+  "tooltip.createmobmasher.mechanical_mob_masher.upgrade.beheading": "참수"
+}

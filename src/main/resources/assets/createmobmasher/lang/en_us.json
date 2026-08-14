@@ -1,13 +1,19 @@
 {
-  "itemGroup.createmobmasher": "Example Mod Tab",
-  "block.createmobmasher.example_block": "Example Block",
-  "item.createmobmasher.example_item": "Example Item",
-
-  "createmobmasher.configuration.title": "CreateMobMasher Configs",
-  "createmobmasher.configuration.section.createmobmasher.common.toml": "CreateMobMasher Configs",
-  "createmobmasher.configuration.section.createmobmasher.common.toml.title": "CreateMobMasher Configs",
-  "createmobmasher.configuration.items": "Item List",
-  "createmobmasher.configuration.logDirtBlock": "Log Dirt Block",
-  "createmobmasher.configuration.magicNumberIntroduction": "Magic Number Text",
-  "createmobmasher.configuration.magicNumber": "Magic Number"
+  "block.createmobmasher.mechanical_mob_masher": "Mechanical Mob Masher",
+  "block.createmobmasher.shaft_half": "Half Shaft",
+  "tooltip.createmobmasher.mechanical_mob_masher.title": "Mechanical Mob Masher",
+  "tooltip.createmobmasher.mechanical_mob_masher.status": "Status: %s",
+  "tooltip.createmobmasher.mechanical_mob_masher.status.active": "Active",
+  "tooltip.createmobmasher.mechanical_mob_masher.status.inactive": "Inactive / Overstressed",
+  "tooltip.createmobmasher.mechanical_mob_masher.required_speed": "Required Speed: %s",
+  "tooltip.createmobmasher.mechanical_mob_masher.stress_impact": "Stress Impact: %s",
+  "tooltip.createmobmasher.mechanical_mob_masher.upgrades": "Upgrades",
+  "tooltip.createmobmasher.mechanical_mob_masher.upgrade_entry": "  %1$s x%2$s",
+  "tooltip.createmobmasher.mechanical_mob_masher.upgrade.none": "  None",
+  "tooltip.createmobmasher.mechanical_mob_masher.upgrade.sharpness": "Sharpness",
+  "tooltip.createmobmasher.mechanical_mob_masher.upgrade.looting": "Looting",
+  "tooltip.createmobmasher.mechanical_mob_masher.upgrade.fire": "Fire Aspect",
+  "tooltip.createmobmasher.mechanical_mob_masher.upgrade.smite": "Smite",
+  "tooltip.createmobmasher.mechanical_mob_masher.upgrade.arthropod": "Bane of Arthropods",
+  "tooltip.createmobmasher.mechanical_mob_masher.upgrade.beheading": "Beheading"
 }

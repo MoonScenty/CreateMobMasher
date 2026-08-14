@@ -27,6 +27,7 @@ import net.neoforged.neoforge.items.ItemStackHandler;
 import java.lang.ref.WeakReference;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Locale;
 import java.util.UUID;
 
 public class MechanicalMobMasherBlockEntity extends KineticBlockEntity  {
@@ -188,30 +189,32 @@ public class MechanicalMobMasherBlockEntity extends KineticBlockEntity  {
         super.addToGoggleTooltip(tooltip, isPlayerSneaking);
 
         tooltip.add(Component.empty());
-        tooltip.add(Component.literal("Mechanical Mob Masher")
+        tooltip.add(Component.translatable("tooltip.createmobmasher.mechanical_mob_masher.title")
                 .withStyle(ChatFormatting.GOLD));
 
         boolean hasEnoughSpeed = Math.abs(getSpeed()) >= MIN_SPEED;
 
-        tooltip.add(Component.literal("Status: ")
-                .withStyle(ChatFormatting.GRAY)
-                .append(Component.literal(hasEnoughSpeed ? "Active" : "Inactive / Overstressed")
-                        .withStyle(hasEnoughSpeed ? ChatFormatting.GREEN : ChatFormatting.RED)));
+        tooltip.add(Component.translatable(
+                "tooltip.createmobmasher.mechanical_mob_masher.status",
+                Component.translatable(hasEnoughSpeed
+                                ? "tooltip.createmobmasher.mechanical_mob_masher.status.active"
+                                : "tooltip.createmobmasher.mechanical_mob_masher.status.inactive")
+                        .withStyle(hasEnoughSpeed ? ChatFormatting.GREEN : ChatFormatting.RED)
+        ).withStyle(ChatFormatting.GRAY));
 
-        tooltip.add(Component.literal("Required Speed: ")
-                .withStyle(ChatFormatting.GRAY)
-                .append(Component.literal("128 RPM")
-                        .withStyle(Math.abs(getSpeed()) >= MIN_SPEED
-                                ? ChatFormatting.GREEN
-                                : ChatFormatting.RED)));
+        tooltip.add(Component.translatable(
+                "tooltip.createmobmasher.mechanical_mob_masher.required_speed",
+                Component.literal("128 RPM")
+                        .withStyle(hasEnoughSpeed ? ChatFormatting.GREEN : ChatFormatting.RED)
+        ).withStyle(ChatFormatting.GRAY));
 
-        tooltip.add(Component.literal("Stress Impact: ")
-                .withStyle(ChatFormatting.GRAY)
-                .append(Component.literal("16 SU/RPM")
-                        .withStyle(ChatFormatting.AQUA)));
+        tooltip.add(Component.translatable(
+                "tooltip.createmobmasher.mechanical_mob_masher.stress_impact",
+                Component.literal("16 SU/RPM").withStyle(ChatFormatting.AQUA)
+        ).withStyle(ChatFormatting.GRAY));
 
         tooltip.add(Component.empty());
-        tooltip.add(Component.literal("Upgrades")
+        tooltip.add(Component.translatable("tooltip.createmobmasher.mechanical_mob_masher.upgrades")
                 .withStyle(ChatFormatting.YELLOW));
 
         boolean hasAny = false;
@@ -225,41 +228,22 @@ public class MechanicalMobMasherBlockEntity extends KineticBlockEntity  {
 
             hasAny = true;
 
-            tooltip.add(Component.literal("  ")
-                    .append(Component.literal(formatUpgradeName(type)))
-                    .append(Component.literal(" x" + count))
+            tooltip.add(Component.translatable(
+                            "tooltip.createmobmasher.mechanical_mob_masher.upgrade_entry",
+                            Component.translatable("tooltip.createmobmasher.mechanical_mob_masher.upgrade."
+                                    + type.name().toLowerCase(Locale.ROOT)),
+                            count)
                     .withStyle(ChatFormatting.WHITE));
         }
 
         if (!hasAny) {
-            tooltip.add(Component.literal("  None")
+            tooltip.add(Component.translatable("tooltip.createmobmasher.mechanical_mob_masher.upgrade.none")
                     .withStyle(ChatFormatting.DARK_GRAY));
         }
 
         return true;
     }
 
-    private String formatUpgradeName(ItemSawUpgrade.SawUpgradeType type) {
-        String raw = type.name().toLowerCase();
-        String[] parts = raw.split("_");
-
-        StringBuilder builder = new StringBuilder();
-
-        for (String part : parts) {
-            if (part.isEmpty()) {
-                continue;
-            }
-
-            if (!builder.isEmpty()) {
-                builder.append(" ");
-            }
-
-            builder.append(Character.toUpperCase(part.charAt(0)));
-            builder.append(part.substring(1));
-        }
-
-        return builder.toString();
-    }
     @Override
     protected void read(CompoundTag tag, HolderLookup.Provider registries, boolean clientPacket) {
         super.read(tag, registries, clientPacket);
