@@ -33,7 +33,6 @@ import java.util.UUID;
 public class MechanicalMobMasherBlockEntity extends KineticBlockEntity  {
 
     private static final float MIN_SPEED = 128.0F;
-    //private static final int WORK_INTERVAL = 10;
     private static final int UPGRADE_SLOTS = ItemSawUpgrade.SawUpgradeType.values().length;
 
     private final ItemStackHandler upgrades = new ItemStackHandler(UPGRADE_SLOTS) {
