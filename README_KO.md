@@ -98,4 +98,5 @@ Gradle 의존성 캐시가 개판 났다면 다음 명령어를 시도한다.
 
 ## 라이선스
 
-All Rights Reserved. 자세한 내용은 [TEMPLATE_LICENSE.txt](TEMPLATE_LICENSE.txt)를 참고한다.
+이 프로젝트는 [MIT 라이선스](LICENSE)로 배포한다. 마음대로 뜯고 고치고 재배포해서
+별의별 흉악한 물건을 만들어도 된다. 대신 저작권 및 라이선스 고지는 그대로 남겨라.

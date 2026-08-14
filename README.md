@@ -99,4 +99,6 @@ If Gradle's dependency cache shits the bed, try:
 
 ## License
 
-All Rights Reserved. See [TEMPLATE_LICENSE.txt](TEMPLATE_LICENSE.txt).
+This project is licensed under the [MIT License](LICENSE). Fork it, tear it apart,
+and build whatever unholy contraption you want with it—just keep the copyright and
+license notice intact.
