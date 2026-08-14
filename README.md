@@ -1,8 +1,8 @@
-# Create Mob Masher
+# Create: Mob Masher
 
 **Create power goes in. Mob guts and loot come out. Simple as hell.**
 
-Create Mob Masher is a NeoForge addon that bolts the rotational power system from
+Create: Mob Masher is a NeoForge addon that bolts the rotational power system from
 [Create](https://github.com/Creators-of-Create/Create) onto the murder machinery from
 [Mob Grinding Utils](https://www.curseforge.com/minecraft/mc-mods/mob-grinding-utils).
 

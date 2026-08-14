@@ -1,8 +1,8 @@
-# Create Mob Masher
+# Create: Mob Masher
 
 **Create 동력을 처먹고 몹 시체와 전리품을 뱉어내는 살벌한 쇳덩어리.**
 
-Create Mob Masher는 [Create](https://github.com/Creators-of-Create/Create)의 회전 동력과
+Create: Mob Masher는 [Create](https://github.com/Creators-of-Create/Create)의 회전 동력과
 [Mob Grinding Utils](https://www.curseforge.com/minecraft/mc-mods/mob-grinding-utils)의
 몹 분쇄 기능을 한데 처박은 NeoForge 애드온이다.
 
